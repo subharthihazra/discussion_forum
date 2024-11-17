@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 // app.use(cors(corsOptions));
 
 // Middleware for CORS with conditional origin handling
-app.use(cors({ origin: true }));
+app.use(cors({ origin: "*" }));
 
 app.use(cookieParser());
 // app.use(cookieMiddleware);
