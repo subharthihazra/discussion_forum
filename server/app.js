@@ -18,22 +18,8 @@ const PORT = process.env.PORT || 3000;
 // };
 // app.use(cors(corsOptions));
 
-const allowedOrigins = [String(process.env.FRONTEND_URL)];
-
 // Middleware for CORS with conditional origin handling
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true); // Allow the origin
-      } else {
-        callback(new Error("Not allowed by CORS")); // Deny the origin
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-    credentials: true, // Enable credentials (cookies/auth tokens) if needed
-  })
-);
+app.use(cors({ origin: true }));
 
 app.use(cookieParser());
 // app.use(cookieMiddleware);
