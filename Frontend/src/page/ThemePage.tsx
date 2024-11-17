@@ -48,7 +48,7 @@ const ThemesPage= () => {
       <div className="container mx-auto lg:p-6 p-0 pb-3 flex flex-col justify-center items-center gap-3 relative z-10">
         {/* Fixed Navbar */}
         <div
-          className={`fixed left-0 right-0 z-50 flex justify-center items-center transition-all duration-300 ${isScrolled ? 'top-0' : 'top-6'
+          className={`fixed left-0 right-0 z-50 flex justify-center items-center transition-all duration-300 ${isScrolled ? 'top-0' : 'top-20'
             }`}
         >
           <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
